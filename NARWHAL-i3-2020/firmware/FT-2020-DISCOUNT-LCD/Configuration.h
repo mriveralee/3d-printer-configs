@@ -1,5 +1,19 @@
 
 //----Quick Settings----//
+// Use this 
+#define REMAP_HEATER_PINS 1
+#ifdef REMAP_HEATER_PINS
+ #define HEATER_0_PIN 8 
+ #define HEATER_1_PIN 9
+ #define HEATER_2_PIN 10
+ #define FAN_PIN 10
+
+
+#endif
+
+
+
+
 // Use these values to set your X,Y,Z,E Steps without having to always find them in the firmware :) -SW
 #define X_STEPS 80
 #define Y_STEPS 80
@@ -7,8 +21,8 @@
 #define E_STEPS 93
 // Use these values to change the max X,Y,Z dimensions.
 #define X_MAX_TRAVEL 200
-#define Y_MAX_TRAVEL 200
-#define Z_MAX_TRAVEL 175
+#define Y_MAX_TRAVEL 194
+#define Z_MAX_TRAVEL 155
 //----------------------//
 
 #ifndef CONFIGURATION_H
@@ -210,9 +224,9 @@
 #ifdef PIDTEMPBED
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-    #define  DEFAULT_bedKp 10.00
-    #define  DEFAULT_bedKi .023
-    #define  DEFAULT_bedKd 305.4
+    #define  DEFAULT_bedKp 791.14  //10.00
+    #define  DEFAULT_bedKi 127.07  //.023
+    #define  DEFAULT_bedKd 1231.41 //305.4
 
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -348,10 +362,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // Travel limits after homing
 //#define X_MAX_POS 200
 #define X_MAX_POS X_MAX_TRAVEL
-#define X_MIN_POS -14
+#define X_MIN_POS 0
 //#define Y_MAX_POS 200
 #define Y_MAX_POS Y_MAX_TRAVEL
-#define Y_MIN_POS -14
+#define Y_MIN_POS -25
 //#define Z_MAX_POS 175
 #define Z_MAX_POS Z_MAX_TRAVEL
 #define Z_MIN_POS 0
