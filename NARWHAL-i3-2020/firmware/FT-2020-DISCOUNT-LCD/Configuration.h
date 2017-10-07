@@ -20,9 +20,9 @@
 #define Z_STEPS 4000
 #define E_STEPS 93
 // Use these values to change the max X,Y,Z dimensions.
-#define X_MAX_TRAVEL 200
-#define Y_MAX_TRAVEL 194
-#define Z_MAX_TRAVEL 155
+#define X_MAX_TRAVEL 185
+#define Y_MAX_TRAVEL 190
+#define Z_MAX_TRAVEL 110
 //----------------------//
 
 #ifndef CONFIGURATION_H
@@ -362,10 +362,10 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 // Travel limits after homing
 //#define X_MAX_POS 200
 #define X_MAX_POS X_MAX_TRAVEL
-#define X_MIN_POS 0
+#define X_MIN_POS -15
 //#define Y_MAX_POS 200
 #define Y_MAX_POS Y_MAX_TRAVEL
-#define Y_MIN_POS -25
+#define Y_MIN_POS -40
 //#define Z_MAX_POS 175
 #define Z_MAX_POS Z_MAX_TRAVEL
 #define Z_MIN_POS 0
