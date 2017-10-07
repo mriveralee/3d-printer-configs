@@ -2,8 +2,8 @@
 //----Quick Settings----//
 // Use this 
 #define REMAP_HEATER_PINS 1
-#ifdef REMAP_HEATER_PINS
- #define HEATER_0_PIN 8 
+  #ifdef REMAP_HEATER_PINS
+  #define HEATER_0_PIN 8 
  #define HEATER_1_PIN 9
  #define HEATER_2_PIN 10
  #define FAN_PIN -1

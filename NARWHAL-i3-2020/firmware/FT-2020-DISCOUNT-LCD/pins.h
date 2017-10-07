@@ -850,7 +850,6 @@
       #define LCD_PINS_D7 29
     #endif
   #endif //ULTRA_LCD
-
 #else // RAMPS_V_1_1 or RAMPS_V_1_2 as default (BOARD_RAMPS_OLD)
 
 #define X_STEP_PIN         26
@@ -910,7 +909,6 @@
 #else
   #define MAX6675_SS       66// Do not use pin 49 as this is tied to the switch inside the SD card socket to detect if there is an SD card present
 #endif
-
 #endif // RAMPS_OLD || RAMPS_13_EFB || RAMPS_13_EEB || RAMPS_13_EFF || 3DRAG
 
 /****************************************************************************************
