@@ -932,9 +932,23 @@
 
 // Steps for Syringe 9255.38 | FDM: 93
 #define SYRINGE_STEPS_PER_MM 9255.38
-#define FDM_STEPS_PER_MM 93
+#define SYRINGE_E0_DIR true
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, SYRINGE_STEPS_PER_MM } 
+#define FDM_STEPS_PER_MM 93
+#define FDM_E0_DIR false
+
+#define USE_SYRINGE_E0 false
+
+#if USE_SYRINGE_E0
+  #define E0_STEPS_PER_MM SYRINGE_STEPS_PER_MM
+  #define E0_INVERT_MOTOR_DIR SYRINGE_E0_DIR
+#else
+  #define E0_STEPS_PER_MM FDM_STEPS_PER_MM
+  #define E0_INVERT_MOTOR_DIR FDM_E0_DIR
+
+#endif
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, E0_STEPS_PER_MM } 
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1347,7 +1361,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR E0_INVERT_MOTOR_DIR // false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
