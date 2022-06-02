@@ -934,7 +934,7 @@
 #define SYRINGE_STEPS_PER_MM 9255.38
 #define SYRINGE_E0_DIR true
 
-#define FDM_STEPS_PER_MM 93
+#define FDM_STEPS_PER_MM 96.50 // orig: 93
 #define FDM_E0_DIR false
 
 #define USE_SYRINGE_E0 false
