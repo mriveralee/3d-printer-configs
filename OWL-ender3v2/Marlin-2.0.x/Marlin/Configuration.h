@@ -719,7 +719,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 1000
+#define EXTRUDE_MAXLENGTH 10000 
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -937,7 +937,7 @@
 #define FDM_STEPS_PER_MM 96.50 // orig: 93
 #define FDM_E0_DIR false
 
-#define USE_SYRINGE_E0 false
+#define USE_SYRINGE_E0 true
 
 #if USE_SYRINGE_E0
   #define E0_STEPS_PER_MM SYRINGE_STEPS_PER_MM
