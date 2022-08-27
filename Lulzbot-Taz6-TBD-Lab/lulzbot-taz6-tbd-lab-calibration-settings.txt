@@ -1,0 +1,24 @@
+; These are the new calibration settings for the Lulzbot TAZ6
+; NOTE: THIS MACHINE USES 1.75mm diameter filament 
+; ALSO NOTE: Both E0 and E1 have nozzle diameter = 0.4mm
+
+; steps per mm for E0
+M92 T0 E2205
+; step per mm for E1
+M92 T1 E2205
+
+; Z-probe offset
+M851 Z-1.45
+
+
+; filament diameter
+M200 D1.75
+M200 T1 D1.75
+
+
+; Save settings
+M503
+
+; View settings
+M500
+
